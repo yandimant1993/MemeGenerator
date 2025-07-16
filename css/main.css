@@ -1,27 +1,58 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body > :not(header){
-    /* height: 100vh; */
-    margin: 0px;
+    margin: 0px; 
     padding: 0px;
+    /* height: 100vw; */
+}
+
+.header{
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: rgb(71, 159, 200);
+}
+
+.header span{
+    font-size:40px;
+    color: aliceblue;
+    font-family: euroRegular ;
 }
 
 .gallery{
-    background-color: lightblue;
     width: 100vw;
     height: 100%;
 }
 
+/* .canvas{
+    background-color:antiquewhite ;
+}
+
 .canvas-picture{
-    width: 50%;
+    width: 80%;
     margin: 20px;
     background-color: #fff;
-   
+} */
+
+img{
+    margin: 10px;
+    height: 200px;
+}
+
+.btn-header{
+    cursor: pointer;
+    padding: 10px;;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius:13% ;
+}
+
+.header-button{
+    display: flex;
+    gap: 15px;
+    
 }

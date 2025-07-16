@@ -5,32 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-meme-generator</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onload="onInit()">
 
-    <header class="header"><span>Meme generator</span>
-        <button class="btn-header">Gallery</button>
-        <button class="btn-header">Saved</button>
-        <button class="btn-header">Randomize</button>
-        <select name="" class="language-select">
-            <option value="English" class="hebrew">English</option>
-            <option value="Hebrew" class="hebrew">עברית</option>
-        </select>
+    <header class="header flex">
+        <span>Meme generator</span>
+        <div class="header-button">
+            <button class="btn-header">Gallery</button>
+            <button class="btn-header">Saved</button>
+            <button class="btn-header">Randomize</button>
+            <select name="" class="language-select">
+                <option value="English" class="hebrew">English</option>
+                <option value="Hebrew" class="hebrew">עברית</option>
+            </select>
+        </div>
     </header>
 
-    <section class="gallery flex">
-        <canvas class="canvas-picture" width="400" height="400"></canvas>
+    <section class="canvas flex">
+        <!-- <canvas class="canvas-picture" width="500" height="500"></canvas> -->
     </section>
 
 
-    <!-- <section class="editor"></section> -->
+    <section class="gallery"></section>
+
+
+    <section class="editor"></section>
 
 
 
-    <script src="meme-service/meme-service.js"></script>
-    <script src="meme-controller/meme.controller.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
 </body>
 
 </html>
