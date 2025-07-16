@@ -9,6 +9,7 @@ body > :not(header){
     margin: 0px; 
     padding: 0px;
     /* height: 100vw; */
+  
 }
 
 .header{
@@ -17,31 +18,40 @@ body > :not(header){
     background-color: rgb(71, 159, 200);
 }
 
+img{
+    width: 200px;
+}
+
 .header span{
     font-size:40px;
     color: aliceblue;
-    font-family: euroRegular ;
+    /* font-family: euroRegular ; */
 }
 
 .gallery{
+    
+    border: 5px solid black;
+    border-radius: 10px;
+    gap: 5px;
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100vw;
     height: 100%;
+    
 }
 
-/* .canvas{
+ .canvas{
     background-color:antiquewhite ;
-}
+    width: 40%;
+    height: 40%;
+} 
 
 .canvas-picture{
     width: 80%;
     margin: 20px;
     background-color: #fff;
-} */
-
-img{
-    margin: 10px;
-    height: 200px;
-}
+} 
 
 .btn-header{
     cursor: pointer;
@@ -53,6 +63,14 @@ img{
 
 .header-button{
     display: flex;
-    gap: 15px;
-    
+    gap: 15px; 
+}
+
+.container-canvas{
+justify-content: center;
+align-items: center;
+}
+
+.hidden{
+    display: none;
 }

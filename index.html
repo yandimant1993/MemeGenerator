@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-meme-generator</title>
@@ -22,12 +24,11 @@
             </select>
         </div>
     </header>
-
-    <section class="canvas flex">
-        <!-- <canvas class="canvas-picture" width="500" height="500"></canvas> -->
-    </section>
-
-
+    <div class="container-canvas flex hidden">
+        <section class="canvas flex">
+            <canvas class="canvas-picture" width="300" height="300"></canvas>
+        </section>
+    </div>
     <section class="gallery"></section>
 
 
@@ -36,7 +37,9 @@
 
 
     <script src="js/meme-service.js"></script>
+    <script src="js/gallery-service.js"></script>
     <script src="js/meme-controller.js"></script>
+    <script src="js/gallery-controller.js"></script>
 </body>
 
 </html>
