@@ -1,0 +1,27 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body > :not(header){
+    /* height: 100vh; */
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery{
+    background-color: lightblue;
+    width: 100vw;
+    height: 100%;
+}
+
+.canvas-picture{
+    width: 50%;
+    margin: 20px;
+    background-color: #fff;
+   
+}
