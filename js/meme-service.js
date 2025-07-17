@@ -11,8 +11,9 @@ var gMeme = {
         {
             txt: 'Insert your text',
             size: 20,
-            color: 'red',
-            pos: { x: gElCanvas.width / 2, y: 100 }
+            color: 'black',
+            pos: { x: gElCanvas.width / 2, y: 100 },
+            lineTextColor: 'black'
         }
     ]
 }
@@ -40,5 +41,10 @@ function setColor(color) {
 
 function changeFontSize(fontSize) {
     gMeme.lines[gMeme.selectedLineIdx].size = +fontSize
+    renderMeme(gCurrUrl)
+}
+
+function setLineTextColor(lineColor) {
+    gMeme.lines[gMeme.selectedLineIdx].lineTextColor = lineColor
     renderMeme(gCurrUrl)
 }

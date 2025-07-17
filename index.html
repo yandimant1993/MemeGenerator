@@ -27,10 +27,11 @@
     </header>
     <div class="container-canvas flex hidden">
         <section class="canvas flex">
-            <input class="font-size" type="number" onchange="onChangeFontSize(this.value)" />
+            <input class="font-size" value="20" type="number" onchange="onChangeFontSize(this.value)" placeholder="20"/>
         
             <div>
-                <input type="color" id="head" name="head" value="#e66465" onchange="onChangeColor(this.value)" />
+                <input type="color" id="head" name="head" value="#000000" onchange="onChangeColor(this.value)" />
+                <input type="color" id="head" name="head" value="#000000" onchange="onChaneLineTextColor(this.value)" />
                 <label for="head"></label>
             </div>
             <button class="download">

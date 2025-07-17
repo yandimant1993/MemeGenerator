@@ -23,10 +23,9 @@ img {
 }
 
 .input {
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    background-color: antiquewhite;
+    /* position: absolute; */
+
+    background-color: rgb(255, 255, 255);
     border: none;
     height: 40px;
     width: 200px;

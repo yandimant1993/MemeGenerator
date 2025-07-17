@@ -14,7 +14,7 @@ function drawText() {
     lines.forEach(line => {
         gCtx.font = `${line.size}px Arial`
         gCtx.fillStyle = line.color
-        gCtx.strokeStyle = 'black'
+        gCtx.strokeStyle = line.lineTextColor
         gCtx.lineWidth = 2
         gCtx.textAlign = 'center'
         gCtx.fillText(line.txt, line.pos.x, line.pos.y)
@@ -49,28 +49,32 @@ function onChangeFontSize(val) {
     renderMeme(gCurrUrl)
 }
 
-
-
-
-
-
-function onShowStarData(ev) {
-    const { offsetX, offsetY, clientX, clientY } = ev
-    // console.log('offsetX, offsetY:', offsetX, offsetY)
-    // console.log('clientX, clientY:', clientX, clientY)
-
-    const clickedStar = gStars.find(star => {
-        // DONE: Find the only clicked star
-        return (
-            offsetX >= star.x && offsetX <= star.x + BAR_WIDTH &&
-            offsetY >= star.y
-        )
-    })
-    // console.log('clickedStar:', clickedStar)
-    if (clickedStar) {
-        // Todo: Fix modal location relative to screen
-        openModal(clickedStar.name, clickedStar.rate, clientX, clientY)
-    } else {
-        closeModal()
+function onChaneLineTextColor(colorLine) {
+    setLineTextColor(colorLine) 
     }
-}
+
+
+
+
+
+
+    function onShowStarData(ev) {
+        const { offsetX, offsetY, clientX, clientY } = ev
+        // console.log('offsetX, offsetY:', offsetX, offsetY)
+        // console.log('clientX, clientY:', clientX, clientY)
+
+        const clickedStar = gStars.find(star => {
+            // DONE: Find the only clicked star
+            return (
+                offsetX >= star.x && offsetX <= star.x + BAR_WIDTH &&
+                offsetY >= star.y
+            )
+        })
+        // console.log('clickedStar:', clickedStar)
+        if (clickedStar) {
+            // Todo: Fix modal location relative to screen
+            openModal(clickedStar.name, clickedStar.rate, clientX, clientY)
+        } else {
+            closeModal()
+        }
+    }
