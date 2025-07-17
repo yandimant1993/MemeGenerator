@@ -25,8 +25,7 @@ function getMeme() {
 }
 
 
-function setLineTxt(txt,idx) {
-    gMeme.selectedLineIdx = idx
+function setLineTxt(txt) {
     gMeme.lines[gMeme.selectedLineIdx].txt = txt
     renderMeme(gCurrUrl)
 }
@@ -51,21 +50,27 @@ function setLineTextColor(lineColor) {
 }
 
 function addNewLine() {
+    const defaultFontSize = 20
+    const defaultColor = 'black'
+    const defaultFont = 'Arial'
+    const lines = gMeme.lines
+    const lastLine = lines[lines.length - 1]
+    const nextY = lastLine ? lastLine.pos.y + 50 : 100
+
     const newLine = {
-        txt: '',
-        size: 20,
+        txt: 'insert your text',
+        size: defaultFontSize,
         align: 'center',
-        color: '#ffffff',
-        lineTextColor: '#000000',
-        pos: { x: gElCanvas.width / 2, y: 100 + gMeme.lines.length * 50 }
+        color: defaultColor,
+        font: defaultFont,
+        pos: {
+            x: gElCanvas.width / 2,
+            y: nextY
+        },
+        lineTextColor: 'black'
     }
+
     gMeme.lines.push(newLine)
 }
 
-function deleteLine() {
-    if (!gMeme.lines.length) return;
-    gMeme.lines.splice(gMeme.selectedLineIdx, 1);
-    gMeme.selectedLineIdx = Math.min(gMeme.selectedLineIdx, gMeme.lines.length - 1);
-    if (!gMeme.lines.length) addNewLine(), gMeme.selectedLineIdx = 0;
-}
 

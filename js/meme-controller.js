@@ -15,7 +15,7 @@ function drawText() {
         gCtx.font = `${line.size}px Arial`
         gCtx.fillStyle = line.color
         gCtx.strokeStyle = line.lineTextColor
-        gCtx.lineWidth = 0.7
+        gCtx.lineWidth = 1
         gCtx.textAlign = 'center'
         gCtx.fillText(line.txt, line.pos.x, line.pos.y)
         gCtx.strokeText(line.txt, line.pos.x, line.pos.y)
@@ -30,14 +30,8 @@ function setImage(imgUrl) {
     renderMeme(imgUrl)
 }
 
-function onSetLineText(txt,idx) {
-    setLineTxt(txt,idx)
-}
-
 function onSetLineText(txt) {
-    if (gMeme.lines.length === 0) return;
-    gMeme.lines[gMeme.selectedLineIdx].txt = txt;
-    renderMeme(gCurrUrl);
+    setLineTxt(txt)
 }
 
 
@@ -56,14 +50,12 @@ function onChangeFontSize(val) {
     renderMeme(gCurrUrl)
 }
 
-function onChaneLineTextColor(colorLine) {
+function onChangeLineTextColor(colorLine) {
     setLineTextColor(colorLine)
 }
 
 
-
-
-
+//not working yet
 function onDown(ev) {
     //* Get mouse/touch position relative to canvas
     const pos = getEvPos(ev)
@@ -105,21 +97,32 @@ function onUp() {
 }
 
 function onAddLine() {
-    addNewLine()
-    const lineIdx = gMeme.lines.length - 1
-    const inputHtml = `<input class="input" type="text" name="textHere" placeholder="insert your text here"
-               oninput="onSetLineText(this.value, ${lineIdx})"/>`
-    const inputEl = document.querySelector('.input-container')
-    inputEl.innerHTML += inputHtml
+    addNewLine() 
+
+    const lineIdx = gMeme.lines.length - 1 
+    gMeme.selectedLineIdx = lineIdx
+
+    const inputContainer = document.querySelector('.input-container')
+    const input = document.createElement('input')
+    input.classList.add('input')
+    input.type = 'text'
+    input.name = 'textHere'
+    input.placeholder = 'insert your text here'
+
+    input.addEventListener('input', (ev) => {
+        onSetLineText(ev.target.value, lineIdx)
+    })
+
+    inputContainer.appendChild(input)
+
     renderMeme(gCurrUrl)
 }
 
 
-
-function onDeleteLine() {
-    deleteLine()
-    renderMeme(gCurrUrl)
-}
+// function onDeleteLine() {
+//     deleteLine()
+//     renderMeme(gCurrUrl)
+// }
 
 
 
