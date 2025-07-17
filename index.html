@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-meme-generator</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body onload="onInit()">
@@ -15,7 +16,7 @@
     <header class="header flex">
         <span>Meme generator</span>
         <div class="header-button">
-            <button class="btn-header">Gallery</button>
+            <button class="btn-header" onclick="backToGallery()">Gallery</button>
             <button class="btn-header">Saved</button>
             <button class="btn-header">Randomize</button>
             <select name="" class="language-select">
@@ -26,13 +27,27 @@
     </header>
     <div class="container-canvas flex hidden">
         <section class="canvas flex">
-            <canvas class="canvas-picture" width="300" height="300"></canvas>
+            <input class="font-size" type="number" onchange="onChangeFontSize(this.value)" />
+        
+            <div>
+                <input type="color" id="head" name="head" value="#e66465" onchange="onChangeColor(this.value)" />
+                <label for="head"></label>
+            </div>
+            <button class="download">
+                <a class="download" download="My-Meme" onclick="onDownloadImg(this)">
+                    <i class="fa-solid fa-download"></i>
+                    <br>
+                    <span>Download</span>
+                </a>
+            </button>
+            <canvas class="canvas-picture" width="400" height="400"></canvas>
+            <input class="input" type="text" name="textHere" id="" placeholder="insert your text here"
+                oninput="onSetLineText(this.value)" />
         </section>
     </div>
     <section class="gallery"></section>
 
-
-    <section class="editor"></section>
+    <!-- <section class="editor"></section> -->
 
 
 
