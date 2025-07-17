@@ -20,7 +20,6 @@ function onImgSelect(imgUrl, picId) {
     var galleryEl = document.querySelector('.gallery')
     galleryEl.style.display = 'none'
     const canvasEl = document.querySelector('.container-canvas')
-    canvasEl.classList.remove('hidden')
     setImage(imgUrl)
     setPicId(picId)
     gCurrUrl = imgUrl

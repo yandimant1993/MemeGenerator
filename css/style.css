@@ -1,5 +1,8 @@
-
-
-@import url('fonts.css');
-@import url('helpers.css');
+@import url('layout/gallery-layout.css');
+@import url('components/gallery.css');
+@import url('components/header.css');
 @import url('main.css');
+@import url('helpers/helpers.css');
+@import url('base.css');
+@import url('components/button.css');
+@import url('mediaQ.css');

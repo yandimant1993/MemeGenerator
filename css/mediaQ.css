@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+    .button-container {
+        padding: 1rem 1.5rem;
+    }
+}
