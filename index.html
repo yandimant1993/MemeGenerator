@@ -25,30 +25,52 @@
             </select>
         </div>
     </header>
-    <div class="container-canvas flex hidden">
-        <section class="canvas flex">
-            <input class="font-size" value="20" type="number" onchange="onChangeFontSize(this.value)" placeholder="20"/>
-        
-            <div>
-                <input type="color" id="head" name="head" value="#000000" onchange="onChangeColor(this.value)" />
-                <input type="color" id="head" name="head" value="#000000" onchange="onChaneLineTextColor(this.value)" />
-                <label for="head"></label>
+
+
+
+    <div class="editor hidden">
+        <div class="main">
+            <div class="button-container">
+                <button class="download">
+                    <a class="download" download="My-Meme" onclick="onDownloadImg(this)">
+                        <i class="fa-solid fa-download"></i>
+                        <br>
+                        <span>Download</span>
+                    </a>
+                </button>
+                
+                <input class="font-size" value="20" type="number" onchange="onChangeFontSize(this.value)"
+                    placeholder="20" />
+                <div class="input-container">
+
+                    <i class="fa-solid fa-droplet"></i>
+                    <input type="color" onchange="onChaneLineTextColor(this.value)" />
+                    <i class="fa-solid fa-fill"></i>
+                    <input type="color" onchange="onChangeColor(this.value)" />
+
+
+
+                    <input class="input" type="text" name="textHere" id="" placeholder="insert your text here"
+                        oninput="onSetLineText(this.value)" />
+                </div>
+                <button onclick="onAddLine()" class="add-line">Add Line</button>
+                <button onclick="onDeleteLine()" class="delete">Delete line</button>
             </div>
-            <button class="download">
-                <a class="download" download="My-Meme" onclick="onDownloadImg(this)">
-                    <i class="fa-solid fa-download"></i>
-                    <br>
-                    <span>Download</span>
-                </a>
-            </button>
-            <canvas class="canvas-picture" width="400" height="400"></canvas>
-            <input class="input" type="text" name="textHere" id="" placeholder="insert your text here"
-                oninput="onSetLineText(this.value)" />
+            <canvas class="canvas-picture" width="500" height="500"></canvas>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container-canvas hidden">
+        <section class="canvas">
+
         </section>
     </div>
     <section class="gallery"></section>
 
-    <!-- <section class="editor"></section> -->
 
 
 
