@@ -25,8 +25,9 @@ function getMeme() {
 }
 
 
-function setLineTxt(txt) {
-    gMeme.lines[gMeme.selectedLineIdx].txt = txt
+function setLineTxt(txt,idx) {
+    gMeme.selectedLineIdx = idx
+    gMeme.lines[idx].txt = txt
     renderMeme(gCurrUrl)
 }
 
@@ -50,27 +51,15 @@ function setLineTextColor(lineColor) {
 }
 
 function addNewLine() {
-    const defaultFontSize = 20
-    const defaultColor = 'black'
-    const defaultFont = 'Arial'
-    const lines = gMeme.lines
-    const lastLine = lines[lines.length - 1]
-    const nextY = lastLine ? lastLine.pos.y + 50 : 100
-
     const newLine = {
-        txt: 'insert your text',
-        size: defaultFontSize,
-        align: 'center',
-        color: defaultColor,
-        font: defaultFont,
-        pos: {
-            x: gElCanvas.width / 2,
-            y: nextY
-        },
+        txt: 'Insert your text',
+        size: 20,
+        color: 'black',
+        pos: { x: gElCanvas.width / 2, y: gElCanvas.height / 2 },
         lineTextColor: 'black'
     }
-
     gMeme.lines.push(newLine)
+    renderMeme(gCurrUrl)
 }
 
 

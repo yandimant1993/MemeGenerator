@@ -31,7 +31,7 @@ function setImage(imgUrl) {
 }
 
 function onSetLineText(txt) {
-    setLineTxt(txt)
+    setLineTxt(txt, gMeme.selectedLineIdx)
 }
 
 
@@ -97,33 +97,8 @@ function onUp() {
 }
 
 function onAddLine() {
-    addNewLine() 
-
-    const lineIdx = gMeme.lines.length - 1 
-    gMeme.selectedLineIdx = lineIdx
-
-    const inputContainer = document.querySelector('.input-container')
-    const input = document.createElement('input')
-    input.classList.add('input')
-    input.type = 'text'
-    input.name = 'textHere'
-    input.placeholder = 'insert your text here'
-
-    input.addEventListener('input', (ev) => {
-        onSetLineText(ev.target.value, lineIdx)
-    })
-
-    inputContainer.appendChild(input)
-
-    renderMeme(gCurrUrl)
+    addNewLine()
 }
-
-
-// function onDeleteLine() {
-//     deleteLine()
-//     renderMeme(gCurrUrl)
-// }
-
 
 
 
