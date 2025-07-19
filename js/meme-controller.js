@@ -8,6 +8,7 @@ function renderMeme(imgUrl) {
         drawText()
         smilesRender()
     }
+    
     gElCanvas.addEventListener('click', onCanvasClick)
 }
 
@@ -18,7 +19,7 @@ function drawText() {
         gCtx.fillStyle = line.color
         gCtx.strokeStyle = line.lineTextColor
         gCtx.lineWidth = 1
-        gCtx.textAlign = 'center'
+        gCtx.textAlign = line.align || 'center'
         gCtx.fillText(line.txt, line.pos.x, line.pos.y)
         gCtx.strokeText(line.txt, line.pos.x, line.pos.y)
     })
@@ -124,6 +125,10 @@ function onAddSmiley(smiley) {
 
 function onRandomize(){
     randomize()
+}
+
+function onSetTextAlign(align){
+    SetTextAlign(align)
 }
 
 

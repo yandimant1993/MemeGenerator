@@ -1,7 +1,7 @@
 @media (max-width: 640px) {
     body {
-        font-size: 16px;
         padding: 0 1rem;
+        margin: 0px;
     }
 
     .header {
@@ -24,7 +24,6 @@
 
     .gallery-container {
         grid-template-columns: 1fr;
-        /* תמונה אחת בשורה */
         gap: 1rem;
     }
 

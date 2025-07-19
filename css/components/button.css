@@ -111,10 +111,14 @@
     border-radius: 13%;
 }
 
-.on-canvas{
+.on-canvas {
     width: 300px;
     height: 50px;
     border: 5px solid lightblue;
     border-radius: 15px;
 }
 
+.button-text-align {
+    display: flex;
+    height: 200px;
+}

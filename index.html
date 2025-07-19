@@ -26,6 +26,7 @@
             </select>
         </div>
     </header>
+    <section class="gallery"></section>
 
 
 
@@ -56,6 +57,17 @@
                 </div>
                 <button onclick="onAddLine()" class="add-line">Add Line</button>
                 <button onclick="onDeleteLine()" class="delete">Delete line</button>
+                <div class="button-text-align">
+                    <button class="text-align" onclick="onSetTextAlign('right')">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                    <button class="text-align" onclick="onSetTextAlign('center')">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button class="text-align" onclick="onSetTextAlign('left')">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                </div>
             </div>
             <div class="canvas-container">
                 <canvas class="canvas-picture" width="500" height="500"></canvas>
@@ -69,7 +81,6 @@
     <!-- <div class="container-canvas hidden">
         <section class="canvas"> </section>
     </div> -->
-    <section class="gallery"></section>
 
 
 

@@ -30,6 +30,13 @@ function backToGallery() {
     const elEditor = document.querySelector('.editor')
     elEditor.classList.add('hidden')
     const galleryEl = document.querySelector('.gallery')
-    galleryEl.style.display = 'block'
+    galleryEl.style.display = 'inline-block'
     renderGallery()
+}
+
+function onSetTextAlign(txt) {
+    const inputEl = document.querySelector('.on-canvas')
+    if (inputEl) inputEl.style.textAlign = txt
+    gMeme.lines[gMeme.selectedLineIdx].align = txt
+    renderMeme(gCurrUrl) 
 }

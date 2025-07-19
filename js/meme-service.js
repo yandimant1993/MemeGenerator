@@ -3,6 +3,7 @@ const smiles = ['😂', '😘', '❤️', '😍', '🤩']
 const gElCanvas = document.querySelector('.canvas-picture')
 const gCtx = gElCanvas.getContext('2d')
 var gCurrUrl
+var gTextAlign = 'center'
 
 var gMeme = {
     selectedImgId: 5,
@@ -121,11 +122,19 @@ function addSmiley(smiley) {
     renderMeme(gCurrUrl)
 }
 
-function randomize(){
-    const randMemeIdx = getRandomInt(0,19)
+function randomize() {
+    const randMemeIdx = getRandomInt(0, 19)
     const picUrl = gImgs[randMemeIdx].url
     gCurrUrl = picUrl
     onImgSelect(gCurrUrl, gImgs[randMemeIdx].id)
+}
+
+function SetTextAlign(txt) {
+    const inputEl = document.querySelector('.on-canvas')
+    if (inputEl) inputEl.style.textAlign = txt
+
+    gMeme.lines[gMeme.selectedLineIdx].align = txt
+    renderMeme(gCurrUrl)
 }
 
 
