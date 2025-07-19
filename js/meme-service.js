@@ -27,7 +27,7 @@ function getMeme() {
 
 function setLineTxt(txt) {
     gMeme.lines[gMeme.selectedLineIdx].txt = txt
-    renderMeme(gCurrUrl)
+    // renderMeme(gCurrUrl)
 }
 
 function setPicId(id) {
@@ -51,7 +51,6 @@ function setLineTextColor(lineColor) {
 
 function addNewLine() {
     var newY = gMeme.lines[gMeme.lines.length - 1].pos.y
-    createInputLine(newY)
     const newLine = {
         txt: '',
         size: 20,
@@ -62,6 +61,7 @@ function addNewLine() {
     gMeme.lines.push(newLine)
     gMeme.selectedLineIdx = gMeme.lines.length - 1
     renderMeme(gCurrUrl)
+    createInputLine(newY)
 }
 
 function createInputLine() {
@@ -76,7 +76,7 @@ function createInputLine() {
     input.style.top = `${line.pos.y}px`
     input.style.left = `${line.pos.x}px`
     input.style.transform = 'translate(-50%, -50%)'
-    input.fontSize = line.size
+    input.style.fontSize = line.size
     input.style.color = line.color
     input.style.textAlign = 'center'
     input.addEventListener('input', () => {
@@ -85,6 +85,7 @@ function createInputLine() {
 
     input.addEventListener('blur', () => {
         input.remove()
+        renderMeme(gCurrUrl)
     })
 
     const canvasContEl = document.querySelector('.canvas-container')
@@ -96,7 +97,7 @@ function onCanvasClick(ev) {
     const clickedLineIdx = gMeme.lines.findIndex(line => {
         const dx = Math.abs(line.pos.x - offsetX)
         const dy = Math.abs(line.pos.y - offsetY)
-        return dx < 100 && dy < line.size // טווח סביר
+        return dx < 100 && dy < line.size 
     })
 
     if (clickedLineIdx !== -1) {
