@@ -121,4 +121,11 @@ function addSmiley(smiley) {
     renderMeme(gCurrUrl)
 }
 
+function randomize(){
+    const randMemeIdx = getRandomInt(0,19)
+    const picUrl = gImgs[randMemeIdx].url
+    gCurrUrl = picUrl
+    onImgSelect(gCurrUrl, gImgs[randMemeIdx].id)
+}
+
 

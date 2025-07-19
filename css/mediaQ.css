@@ -1,5 +1,64 @@
 @media (max-width: 640px) {
+    body {
+        font-size: 16px;
+        padding: 0 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .header-button {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .btn-header {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        /* תמונה אחת בשורה */
+        gap: 1rem;
+    }
+
+    .editor {
+        flex-direction: column;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .smiles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    select.language-select {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* @media (max-width: 640px) {
     .button-container {
         padding: 1rem 1.5rem;
     }
-}
+} */

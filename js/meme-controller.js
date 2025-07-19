@@ -122,6 +122,10 @@ function onAddSmiley(smiley) {
     addSmiley(smiley)
 }
 
+function onRandomize(){
+    randomize()
+}
+
 
 
 
