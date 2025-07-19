@@ -7,6 +7,7 @@ function renderMeme(imgUrl) {
         drawImg(img)
         drawText()
     }
+    gElCanvas.addEventListener('click', onCanvasClick)
 }
 
 function drawText() {
@@ -31,7 +32,7 @@ function setImage(imgUrl) {
 }
 
 function onSetLineText(txt) {
-    setLineTxt(txt, gMeme.selectedLineIdx)
+    setLineTxt(txt)
 }
 
 
@@ -98,6 +99,7 @@ function onUp() {
 
 function onAddLine() {
     addNewLine()
+    // createInputLine()
 }
 
 
