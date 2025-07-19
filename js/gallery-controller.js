@@ -29,8 +29,6 @@ function onImgSelect(imgUrl, picId) {
 function backToGallery() {
     const elEditor = document.querySelector('.editor')
     elEditor.classList.add('hidden')
-    const canvEl = document.querySelector('.container-canvas')
-    canvEl.classList.add('hidden')
     const galleryEl = document.querySelector('.gallery')
     galleryEl.style.display = 'block'
     renderGallery()

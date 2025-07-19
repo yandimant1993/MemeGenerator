@@ -2,14 +2,25 @@
 .editor {
     display: flex;
     justify-content: center;
+    
 }
 
 .canvas-container{
 position: relative;
 }
 
+/* .main{
+    display: flex;
+    margin-top: 50px;
+} */
 
 
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
 
 
 

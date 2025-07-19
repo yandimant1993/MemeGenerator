@@ -6,6 +6,7 @@ function renderMeme(imgUrl) {
     img.onload = () => {
         drawImg(img)
         drawText()
+        smilesRender()
     }
     gElCanvas.addEventListener('click', onCanvasClick)
 }
@@ -100,6 +101,25 @@ function onUp() {
 function onAddLine() {
     addNewLine()
     // createInputLine()
+}
+
+function onDeleteLine() {
+    DeleteLine()
+}
+
+function smilesRender() {
+    var strHtml = ''
+    const smilesEl = document.querySelector('.smiles')
+    strHtml = '<div class = "smiley-stickers">'
+    smiles.forEach((smiley) => {
+        strHtml += `<span class="face" onclick="onAddSmiley('${smiley}')">${smiley}</span>`
+    })
+    strHtml += '</div>'
+    smilesEl.innerHTML = strHtml
+}
+
+function onAddSmiley(smiley) {
+    addSmiley(smiley)
 }
 
 
