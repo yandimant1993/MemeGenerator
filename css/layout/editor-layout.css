@@ -1,0 +1,7 @@
+
+
+.editor-layout{
+    display: grid;
+    margin: 10px 0px;
+    grid-template-columns: minmax(200px,1fr) minmax(500px,1fr) minmax(200px,1fr)
+}

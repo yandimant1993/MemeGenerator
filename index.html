@@ -30,51 +30,50 @@
 
     <section class="gallery"></section>
 
+    <div class="editor-layout hidden">
+        <div class="canvas-container">
+            <canvas class="canvas-picture" width="500" height="500"></canvas>
+        </div>
+        <div class="editor-button-container">
+            <div class="btn-download">
+                <a class="download-link" download="My-Meme" onclick="onDownloadImg(this)">
+                    <i class="fa-solid fa-download">
+                    </i>
+                    <span>Download</span>
 
-
-    <div class="editor hidden">
-        <div class="main">
+                </a>
+            </div>
             <div class="smiles"></div>
-            <div class="button-container">
-                <button class="download">
-                    <a class="download" download="My-Meme" onclick="onDownloadImg(this)">
-                        <i class="fa-solid fa-download"></i>
-                        <br>
-                        <span>Download</span>
-                    </a>
-                </button>
-
+            <div class="color">
+                <i class="fa-solid fa-droplet"></i>
+                <input type="color" onchange="onChangeLineTextColor(this.value)" />
+                <i class="fa-solid fa-fill"></i>
+                <input type="color" onchange="onChangeColor(this.value)" />
+            </div>
+            <div class="inputs">
+                <input class="input" type="text" name="textHere" id="" placeholder="insert your text here"
+                    oninput="onSetLineText(this.value)" />
                 <input class="font-size" value="20" type="number" onchange="onChangeFontSize(this.value)"
                     placeholder="20" />
-                <div class="input-container">
+            </div>
 
-                    <i class="fa-solid fa-droplet"></i>
-                    <input type="color" onchange="onChangeLineTextColor(this.value)" />
-                    <i class="fa-solid fa-fill"></i>
-                    <input type="color" onchange="onChangeColor(this.value)" />
-
-
-                    <input class="input" type="text" name="textHere" id="" placeholder="insert your text here"
-                        oninput="onSetLineText(this.value)" />
-                </div>
+            <div class="add-delete-line">
                 <button onclick="onAddLine()" class="add-line">Add Line</button>
                 <button onclick="onDeleteLine()" class="delete">Delete line</button>
-                <div class="button-text-align">
-                    <button class="text-align" onclick="onSetTextAlign('right')">
-                        <i class="fa-solid fa-align-right"></i>
-                    </button>
-                    <button class="text-align" onclick="onSetTextAlign('center')">
-                        <i class="fa-solid fa-align-center"></i>
-                    </button>
-                    <button class="text-align" onclick="onSetTextAlign('left')">
-                        <i class="fa-solid fa-align-left"></i>
-                    </button>
-                </div>
             </div>
-            <div class="canvas-container">
-                <canvas class="canvas-picture" width="500" height="500"></canvas>
+            <div class="text-align">
+                <button class="btn-text-align" onclick="onSetTextAlign('right')">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button class="btn-text-align" onclick="onSetTextAlign('center')">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button class="btn-text-align" onclick="onSetTextAlign('left')">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
             </div>
         </div>
+
     </div>
 
 

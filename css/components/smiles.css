@@ -1,17 +1,7 @@
 
 
-.smiles {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.smiley-stickers{
+display: flex;
 }
 
 

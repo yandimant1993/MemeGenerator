@@ -1,134 +1,9 @@
-/* .button-container .add-line {
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    height: 40px;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    cursor: pointer;
-}
-
-.button-container .add-line:hover {
-    background-color: #2c387e;
-}
-
-.button-container button,
-.button-container input[type="color"],
-.button-container input[type="number"],
-.button-container select,
-.button-container input[type="text"] {
-    padding: 0.3rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 1.5px solid #ccc;
-    background-color: #e8eef6;
-    cursor: pointer;
-    transition: background-color 0.25s ease, border-color 0.25s ease;
-    height: 45px;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.button-container input[type="text"] {
-    text-align: center;
-}
-
-
-.button-container>* {
-    width: 100%;
-    min-width: 0;
-    /* box-sizing: border-box; */
-/* } */
-
-
-/* .button-container .download {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-    color: #0a1e9f;
-    font-weight: 600;
-    border: 2px solid #0a1e9f;
-    background-color: transparent;
-    padding: 0.5rem 1.2rem;
-    height: 40px;
-    border-radius: 12px;
-    box-shadow: none;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-
-.button-container .download i {
-    font-size: 1.2rem;
-}
-
-.button-container .download:hover {
-    background-color: #0a1e9f;
-    color: white;
-    border-color: #0a1e9f;
-} */
-
-/* .button-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem 2rem;
-    background-color: #f7f9fc;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 0.7rem;
-    overflow-x: hidden;
-    box-sizing: border-box;
-} */
-
-/* .language-select {
-    margin-right: 50px;
-}
-
-.header-button {
-    display: flex;
-    gap: 60px;
-}
-
-.btn-header {
-    cursor: pointer;
-    padding: 10px;
-    ;
-    background-color: aqua;
-    border: 1px solid black;
-    border-radius: 13%;
-}
-
-.on-canvas {
-    width: 300px;
-    height: 50px;
-    border: 5px solid lightblue;
-    border-radius: 15px;
-}
-
-.button-text-align {
-    display: flex;
-    height: 200px;
-}  */
-
 .button-container {
     height: 40px;
     width: 500px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .button-container button {
@@ -139,9 +14,93 @@
     font-weight: bold;
     cursor: pointer;
     color: white;
-    
 }
 
-.button-container > :last-child {
+.button-container> :last-child {
     margin-right: 30px;
 }
+
+.editor-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-align {
+    display: flex;
+    /* align-self: center; */
+    gap: 10px;
+
+
+}
+
+.fa-solid {
+    height: 30px;
+    width: 30px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+}
+
+.fa-solid.fa-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+}
+
+span {
+    font-size: 13px;
+    color: grey;
+    font-weight: bold;
+}
+
+.download-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.smiley-stickers {
+    border: 5px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: grey;
+    gap: 10px;
+}
+
+.face:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.fa-solid.fa-align-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-solid.fa-align-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-solid.fa-align-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text-align {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+}
+

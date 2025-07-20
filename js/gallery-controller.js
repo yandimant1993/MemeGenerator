@@ -15,7 +15,7 @@ function renderGallery() {
 
 
 function onImgSelect(imgUrl, picId) {
-    var elEditor = document.querySelector('.editor')
+    var elEditor = document.querySelector('.editor-layout')
     elEditor.classList.remove('hidden')
     var galleryEl = document.querySelector('.gallery')
     galleryEl.style.display = 'none'
@@ -27,7 +27,7 @@ function onImgSelect(imgUrl, picId) {
 
 
 function backToGallery() {
-    const elEditor = document.querySelector('.editor')
+    const elEditor = document.querySelector('.editor-layout')
     elEditor.classList.add('hidden')
     const galleryEl = document.querySelector('.gallery')
     galleryEl.style.display = 'inline-block'
