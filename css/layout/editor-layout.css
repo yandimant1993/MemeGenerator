@@ -4,10 +4,10 @@
     display: grid;
     margin: 10px 0px;
     grid-template-columns: minmax(200px,1fr) minmax(500px,1fr) minmax(200px,1fr);
-    background-color: darkgray
+    background-color: darkgray;
+    border-radius: 10px;
 }
 
 .editor-button-container{
-    border: 5px solid black;
-    border-radius: 20px;
+    margin-left: 500px;
 }

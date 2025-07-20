@@ -47,3 +47,8 @@ function hideEditor() {
     const editorEl = document.querySelector('.editor-layout')
     editorEl.style.display = 'none'
 }
+
+function onToggleMenu() {
+  const menu = document.querySelector('.nav-menu')
+  menu.style.display = 'none'
+}

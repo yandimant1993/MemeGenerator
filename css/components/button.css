@@ -140,14 +140,29 @@ span {
     border-radius: 7px;
     font-size: 20px;
     width: 150px;
+    cursor: pointer;
 }
 
 .delete{
     width: 150px;
     border-radius: 7px;
     font-size: 20px;
-    
+    cursor: pointer;
+    margin-top: 10px;
 }
+
+.delete:hover{
+    border-radius: 7px;
+    background-color: rgb(75, 75, 75);
+    transition: 1s;
+}
+
+.add-line:hover{
+    border-radius: 7px;
+    background-color: rgb(75, 75, 75);
+    transition: 1s;
+}
+
 
 a{
     cursor: pointer;
