@@ -66,7 +66,6 @@ function addNewLine() {
     gMeme.lines.push(newLine)
     gMeme.selectedLineIdx = gMeme.lines.length - 1
     renderMeme(gCurrUrl)
-    // createInputLine(newY)
 }
 
 function DeleteLine() {
@@ -75,35 +74,6 @@ function DeleteLine() {
     gMeme.selectedLineIdx = Math.max(0, gMeme.selectedLineIdx - 1)
     renderMeme(gCurrUrl)
 }
-
-
-// function createInputLine() {
-//     const input = document.createElement('input')
-//     const idx = gMeme.selectedLineIdx
-//     const line = gMeme.lines[idx]
-//     input.className = 'on-canvas'
-//     input.type = 'text'
-//     input.value = line.txt
-//     input.placeholder = 'insert your text'
-//     input.style.position = 'absolute'
-//     input.style.top = `${line.pos.y}px`
-//     input.style.left = `${line.pos.x}px`
-//     input.style.transform = 'translate(-50%, -50%)'
-//     input.style.fontSize = line.size
-//     input.style.color = line.color
-//     input.style.textAlign = 'center'
-//     input.addEventListener('input', () => {
-//         setLineTxt(input.value, idx)
-//     })
-
-//     input.addEventListener('blur', () => {
-//         input.remove()
-//         renderMeme(gCurrUrl)
-//     })
-
-//     const canvasContEl = document.querySelector('.canvas-container')
-//     canvasContEl.appendChild(input)
-// }
 
 function onCanvasClick(ev) {
     const { offsetX, offsetY } = ev
@@ -115,7 +85,6 @@ function onCanvasClick(ev) {
 
     if (clickedIdx !== -1) {
         gMeme.selectedLineIdx = clickedIdx
-        // createInputLine()
     }
 }
 

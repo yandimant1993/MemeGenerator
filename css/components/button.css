@@ -163,7 +163,6 @@ span {
     transition: 1s;
 }
 
-
 a{
     cursor: pointer;
     display: block;
@@ -174,4 +173,16 @@ a{
     border-radius: 15px;
     background-color: rgb(75, 75, 75);
     transition: 1s;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input{
+    border: 5px solid grey;
+    font-size: medium;
+    border-radius: 8px;
 }
