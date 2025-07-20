@@ -1,11 +1,13 @@
 'use strict'
 
 function onInit() {
+    hideEditor()
     renderGallery()
+
+
 }
 
 function renderGallery() {
-
     var strHtml = ''
     const imgEl = document.querySelector('.gallery')
     for (var i = 0; i < 18; i++) {
@@ -17,9 +19,9 @@ function renderGallery() {
 
 function onImgSelect(imgUrl, picId) {
     const elEditor = document.querySelector('.editor-layout')
-    elEditor.classList.remove('hidden')
+    elEditor.style.display = 'grid'
     var galleryEl = document.querySelector('.gallery')
-    galleryEl.classList.add('hidden')
+    galleryEl.style.display = 'none'
     setImage(imgUrl)
     setPicId(picId)
     gCurrUrl = imgUrl
@@ -27,12 +29,10 @@ function onImgSelect(imgUrl, picId) {
 
 
 function backToGallery() {
-    const elEditor = document.querySelector('.gallery')
-    elEditor.classList.remove('hidden')
-
-    const canvasEl = document.querySelector('.editor-layout')
-    canvasEl.classList.add('hidden')
-
+    const elGallery = document.querySelector('.gallery')
+    elGallery.style.display = 'grid'
+    const elEditor = document.querySelector('.editor-layout')
+    elEditor.style.display = 'none'
     renderGallery()
 }
 
@@ -41,4 +41,9 @@ function onSetTextAlign(txt) {
     if (inputEl) inputEl.style.textAlign = txt
     gMeme.lines[gMeme.selectedLineIdx].align = txt
     renderMeme(gCurrUrl)
+}
+
+function hideEditor() {
+    const editorEl = document.querySelector('.editor-layout')
+    editorEl.style.display = 'none'
 }
