@@ -1,0 +1,16 @@
+
+
+.footer{
+    display: flex;
+    height: 120px;
+    background-color: lightslategray;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.footer p{
+    font-size: large;
+    font-weight: bold;
+}

@@ -124,20 +124,21 @@
 }  */
 
 .button-container {
-    height: 30px;
-    width: 400px;
+    height: 40px;
+    width: 500px;
     display: flex;
     justify-content: space-between;
     
 }
 
 .button-container button {
-    background-color: lightcyan;
+    background-color: rgb(117, 117, 117);
     border-radius: 5px;
     border: none;
     font-size: 21px;
     font-weight: bold;
     cursor: pointer;
+    color: white;
     
 }
 
