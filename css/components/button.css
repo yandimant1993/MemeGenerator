@@ -7,13 +7,12 @@
 }
 
 .button-container button {
-    background-color: rgb(117, 117, 117);
-    border-radius: 5px;
+    background-color: lightslategray;
     border: none;
     font-size: 21px;
     font-weight: bold;
     cursor: pointer;
-    color: white;
+
 }
 
 .button-container> :last-child {
@@ -24,16 +23,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .text-align {
     display: flex;
     /* align-self: center; */
     gap: 10px;
-
-
 }
+
 
 .fa-solid {
     height: 30px;
@@ -42,6 +40,7 @@
     border-radius: 10px;
     display: flex;
     align-self: center;
+    gap: 15px;
 }
 
 .fa-solid.fa-download {
@@ -58,10 +57,7 @@ span {
     font-weight: bold;
 }
 
-.download-link {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .smiley-stickers {
     border: 5px solid lightgray;
@@ -104,3 +100,63 @@ span {
     width: 70px;
 }
 
+.fa-solid.fa-droplet {
+    width: 50px;
+    height: 35px;
+    background-color: rgb(208, 208, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa-solid.fa-fill {
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 35px;
+    display: flex;
+    background-color: rgb(208, 208, 208);
+    ;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.font-size {
+    height: 25px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(201, 201, 201);
+    font-size: medium;
+}
+
+.add-line{
+    border-radius: 7px;
+    font-size: 20px;
+    width: 150px;
+}
+
+.delete{
+    width: 150px;
+    border-radius: 7px;
+    font-size: 20px;
+    
+}
+
+a{
+    cursor: pointer;
+    display: block;
+    color: black;
+}
+
+.btn-download:hover{
+    border-radius: 15px;
+    background-color: rgb(75, 75, 75);
+    transition: 1s;
+}

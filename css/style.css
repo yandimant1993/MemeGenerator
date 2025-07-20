@@ -1,3 +1,4 @@
+@import url('mediaQ.css');
 @import url('layout/gallery-layout.css');
 @import url('components/gallery.css');
 @import url('components/header.css');
@@ -5,7 +6,6 @@
 @import url('helpers/helpers.css');
 @import url('base.css');
 @import url('components/button.css');
-@import url('mediaQ.css');
 @import url('components/smiles.css');
 @import url('components/footer.css');
 @import url('layout/editor-layout.css');

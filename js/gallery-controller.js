@@ -5,6 +5,7 @@ function onInit() {
 }
 
 function renderGallery() {
+
     var strHtml = ''
     const imgEl = document.querySelector('.gallery')
     for (var i = 0; i < 18; i++) {
@@ -15,11 +16,10 @@ function renderGallery() {
 
 
 function onImgSelect(imgUrl, picId) {
-    var elEditor = document.querySelector('.editor-layout')
+    const elEditor = document.querySelector('.editor-layout')
     elEditor.classList.remove('hidden')
     var galleryEl = document.querySelector('.gallery')
-    galleryEl.style.display = 'none'
-    const canvasEl = document.querySelector('.container-canvas')
+    galleryEl.classList.add('hidden')
     setImage(imgUrl)
     setPicId(picId)
     gCurrUrl = imgUrl
@@ -27,10 +27,12 @@ function onImgSelect(imgUrl, picId) {
 
 
 function backToGallery() {
-    const elEditor = document.querySelector('.editor-layout')
-    elEditor.classList.add('hidden')
-    const galleryEl = document.querySelector('.gallery')
-    galleryEl.style.display = 'inline-block'
+    const elEditor = document.querySelector('.gallery')
+    elEditor.classList.remove('hidden')
+
+    const canvasEl = document.querySelector('.editor-layout')
+    canvasEl.classList.add('hidden')
+
     renderGallery()
 }
 
@@ -38,5 +40,5 @@ function onSetTextAlign(txt) {
     const inputEl = document.querySelector('.on-canvas')
     if (inputEl) inputEl.style.textAlign = txt
     gMeme.lines[gMeme.selectedLineIdx].align = txt
-    renderMeme(gCurrUrl) 
+    renderMeme(gCurrUrl)
 }
