@@ -1,4 +1,4 @@
-.button-container .add-line {
+/* .button-container .add-line {
     background-color: #3f51b5;
     color: white;
     border: none;
@@ -44,10 +44,10 @@
     width: 100%;
     min-width: 0;
     /* box-sizing: border-box; */
-}
+/* } */
 
 
-.button-container .download {
+/* .button-container .download {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,9 +76,9 @@
     background-color: #0a1e9f;
     color: white;
     border-color: #0a1e9f;
-}
+} */
 
-.button-container {
+/* .button-container {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
@@ -91,9 +91,9 @@
     row-gap: 0.7rem;
     overflow-x: hidden;
     box-sizing: border-box;
-}
+} */
 
-.language-select {
+/* .language-select {
     margin-right: 50px;
 }
 
@@ -121,4 +121,26 @@
 .button-text-align {
     display: flex;
     height: 200px;
+}  */
+
+.button-container {
+    height: 30px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.button-container button {
+    background-color: lightcyan;
+    border-radius: 5px;
+    border: none;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.button-container > :last-child {
+    margin-right: 30px;
 }

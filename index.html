@@ -14,7 +14,28 @@
 
 <body onload="onInit()">
 
-    <header class="header flex">
+    <header class="header">
+        <div class="logo-container">
+            <p class="logo">Meme-generator</p>
+        </div>
+        <div class="button-container">
+            <button class="btn-gallery" onclick="backToGallery()">Gallery</button>
+            <button class="btv-save">Saved</button>
+            <button class="btv-randomize" onclick="onRandomize()">Randomize</button>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <header class="header flex">
         <span>Meme generator</span>
         <div class="header-button">
             <button class="btn-header" onclick="backToGallery()">Gallery</button>
@@ -25,7 +46,7 @@
                 <option value="Hebrew" class="hebrew">עברית</option>
             </select>
         </div>
-    </header>
+    </header> -->
     <section class="gallery"></section>
 
 
